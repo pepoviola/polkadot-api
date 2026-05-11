@@ -47,10 +47,10 @@ export type ChainDefinition = {
     apis: ApisTypedef<any>
   }
   asset: PlainDescriptor<any>
-  extensions?: Record<string, { value?: any; additionalSigned?: any }>
+  extensions: Record<string, { value?: any; additionalSigned?: any }>
   metadataTypes: Promise<Uint8Array>
   getMetadata: () => Promise<Uint8Array>
-  genesis: HexString | undefined
+  genesis: HexString
 }
 
 type BuildTuple<L extends number, E, R extends Array<E>> = R["length"] extends L
